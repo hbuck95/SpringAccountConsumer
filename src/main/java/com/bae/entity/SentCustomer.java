@@ -1,37 +1,30 @@
-package com.bae;
+package com.bae.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+public class SentCustomer {
 
-@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
-public class Customer {
-
-	private String id;
-
+	private String accountId;
 	private String firstName;
-
 	private String lastName;
-
 	private String accountNumber;
-
 	private int prize;
 
-	public Customer() {
+	public SentCustomer() {
 	}
 
-	public Customer(String accountId, String firstName, String lastName, String accountNumber, int prize) {
+	public SentCustomer(String accountId, String firstName, String lastName, String accountNumber, int prize) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
-		this.id = accountId;
+		this.accountId = accountId;
 		this.prize = prize;
 	}
 
 	public String getId() {
-		return id;
+		return accountId;
 	}
 
 	public void setId(String id) {
-		this.id = id;
+		this.accountId = id;
 	}
 
 	public String getFirstName() {
