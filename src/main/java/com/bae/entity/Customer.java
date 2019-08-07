@@ -1,8 +1,11 @@
-package com.bae;
+package com.bae.entity;
 
-public class SentCustomer {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-	private String accountId;
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+public class Customer {
+
+	private String id;
 
 	private String firstName;
 
@@ -12,23 +15,23 @@ public class SentCustomer {
 
 	private int prize;
 
-	public SentCustomer() {
+	public Customer() {
 	}
 
-	public SentCustomer(String accountId, String firstName, String lastName, String accountNumber, int prize) {
+	public Customer(String accountId, String firstName, String lastName, String accountNumber, int prize) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
-		this.accountId = accountId;
+		this.id = accountId;
 		this.prize = prize;
 	}
 
 	public String getId() {
-		return accountId;
+		return id;
 	}
 
 	public void setId(String id) {
-		this.accountId = id;
+		this.id = id;
 	}
 
 	public String getFirstName() {
