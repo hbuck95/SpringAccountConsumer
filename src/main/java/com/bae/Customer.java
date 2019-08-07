@@ -3,9 +3,9 @@ package com.bae;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
-public class Account {
+public class Customer {
 
-	private Long accountId;
+	private String id;
 
 	private String firstName;
 
@@ -15,23 +15,23 @@ public class Account {
 
 	private int prize;
 
-	public Account() {
+	public Customer() {
 	}
 
-	public Account(Long accountId, String firstName, String lastName, String accountNumber, int prize) {
+	public Customer(String accountId, String firstName, String lastName, String accountNumber, int prize) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
-		this.accountId = accountId;
+		this.id = accountId;
 		this.prize = prize;
 	}
 
-	public Long getId() {
-		return accountId;
+	public String getId() {
+		return id;
 	}
 
-	public void setId(Long id) {
-		this.accountId = id;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {
