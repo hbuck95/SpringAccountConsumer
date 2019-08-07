@@ -1,8 +1,8 @@
 package com.bae;
 
-public class SentAccount {
+public class SentCustomer {
 
-	private Long accountId;
+	private String accountId;
 
 	private String firstName;
 
@@ -12,10 +12,10 @@ public class SentAccount {
 
 	private int prize;
 
-	public SentAccount() {
+	public SentCustomer() {
 	}
 
-	public SentAccount(Long accountId, String firstName, String lastName, String accountNumber, int prize) {
+	public SentCustomer(String accountId, String firstName, String lastName, String accountNumber, int prize) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
@@ -23,11 +23,11 @@ public class SentAccount {
 		this.prize = prize;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return accountId;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.accountId = id;
 	}
 

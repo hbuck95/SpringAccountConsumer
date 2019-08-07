@@ -11,9 +11,18 @@ public class AccountReceiver {
 	private MongoAccountRepo repo;
 
 	@JmsListener(destination = "AccountQueue")
-	public void receiveMessage(Account account) {
+	public void receiveMessage(Customer account) {
 //		repo.save((SentAccount) jsonMessage.getObjectProperty("account"));
 //		System.out.println(jsonMessage);
 		repo.insert(account);
+	}
+
+	@JmsListener(destination = "AccountQueue")
+	public void receiveMessage(String account) {
+//		repo.save((SentAccount) jsonMessage.getObjectProperty("account"));
+//		System.out.println(jsonMessage);
+		System.out.println("Wrong hit");
+		System.out.println(account);
+		// repo.insert(account);
 	}
 }
