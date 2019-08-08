@@ -1,19 +1,18 @@
 package com.bae.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.JsonNode;
 
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class Customer {
 
 	private String id;
-
 	private String firstName;
-
 	private String lastName;
-
 	private String accountNumber;
-
 	private int prize;
+
+	private JsonNode details;
 
 	public Customer() {
 	}
